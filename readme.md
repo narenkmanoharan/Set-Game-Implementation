@@ -1,4 +1,5 @@
 ## SET Game Implementation
+[![Build Status](https://travis-ci.org/narenkmanoharan/Set-Game-Implementation.svg?branch=master)](https://travis-ci.org/narenkmanoharan/Set-Game-Implementation)
 
 - Displays the maximum number of SETs possible from the given input
 - Displays the largest number of Disjoint SETs in the input
