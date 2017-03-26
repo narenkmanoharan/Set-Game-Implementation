@@ -9,9 +9,13 @@ def main():
     filepath = os.path.dirname(__file__) + "/" + filename
     card_list = input.read_from_file(filepath)
     set_cards = set.check_combination(card_list)
+    largest_disjoint_set = set.find_largest_disjoint_set(set_cards)
+    print_output(set_cards, largest_disjoint_set)
+
+
+def print_output(set_cards, largest_disjoint_set):
     print()
     print(len(set_cards))
-    largest_disjoint_set = set.find_largest_disjoint_set(set_cards)
     print(len(largest_disjoint_set))
     print()
     for each_set in largest_disjoint_set:

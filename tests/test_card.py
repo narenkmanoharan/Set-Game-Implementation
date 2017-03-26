@@ -1,9 +1,9 @@
-import unittest
+import unittest2
 import card
 import set
 
 
-class TestCardMethods(unittest.TestCase):
+class TestCardMethods(unittest2.TestCase):
     def test_create_card(self):
         test_card = card.Card(0, 1, 2, 2)
         expected_result = 'blue $$$'
@@ -29,4 +29,4 @@ class TestCardMethods(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest2.main()

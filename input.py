@@ -3,6 +3,9 @@ import sys
 
 
 def input_filename():
+    """
+    Function to input the filename from the handle the input from the user
+    """
     while True:
         input_val = input("Please enter option: ")
         if input_val == "1":
@@ -17,6 +20,11 @@ def input_filename():
 
 
 def read_from_file(filename):
+
+    """
+    Function to read the lines from the input file and create new Card object for each line read
+    :rtype: List of Card objects
+    """
     card_list = []
     try:
         file = open(filename, "r")

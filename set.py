@@ -4,6 +4,10 @@ from card import Card
 
 
 def create_cards(card_string):
+    """
+    Function takes in the card string from the file input and returns a Card object using the Class Card
+    :rtype: Card Object
+    """
     card = Card()
     card_string = card_string.split()
     if len(card_string) < 2:
@@ -27,6 +31,11 @@ def create_cards(card_string):
 
 
 def create_third_card(card1, card2):
+
+    """
+    Function to create the third card of a set when two cards are given
+    :rtype: Card Object
+    """
     card3 = Card()
     value_dict = {'01': 2, '10': 2, '12': 0, '21': 0, '20': 1, '02': 1}
     if card1.color == card2.color:
@@ -49,6 +58,10 @@ def create_third_card(card1, card2):
 
 
 def check_combination(cards):
+    """
+    Function to check if the combination is already in the found set else add it to the list
+    :rtype: List of SETs (List of Lists)
+    """
     result_set = []
     for each_combination in itertools.combinations(cards, 2):
         third_card = create_third_card(each_combination[0], each_combination[1])
@@ -60,6 +73,10 @@ def check_combination(cards):
 
 
 def find_largest_disjoint_set(cards):
+    """
+    Function to recursively find the disjoint SETs using the recurse_disjoint helper function
+    :rtype: List of SETs (List of Lists)
+    """
     largest_disjoint_set = []
     for result in recurse_disjoint(cards):
         if len(result) > len(largest_disjoint_set):
@@ -68,6 +85,10 @@ def find_largest_disjoint_set(cards):
 
 
 def recurse_disjoint(set_of_cards, set_list=set(), memo=None):
+    """
+    Helper function to recursively check for disjoint set
+    :rtype: Generator object
+    """
     if memo is None:
         memo = []
     if memo:

@@ -1,8 +1,8 @@
-import unittest
+import unittest2
 import set
 
 
-class TestSETMethods(unittest.TestCase):
+class TestSETMethods(unittest2.TestCase):
     def test_create_cards_1(self):
         card_string = 'blue #'
         card_obj = set.create_cards(card_string)
@@ -37,4 +37,4 @@ class TestSETMethods(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest2.main()
