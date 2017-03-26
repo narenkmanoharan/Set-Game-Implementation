@@ -1,5 +1,4 @@
 import set
-import sys
 
 
 def input_filename():
@@ -20,12 +19,11 @@ def read_from_file(filename):
     card_list = []
     try:
         file = open(filename, "r")
-    except:
-        print("\nPlease check if the file inside the code folder\n")
-        input_filename()
-    else:
         for card_string in file:
             cards = set.create_cards(card_string)
             if cards is not None:
                 card_list.append(cards)
         return card_list
+    except:
+        print("\nPlease check if the file inside the code folder\n")
+        input_filename()        
