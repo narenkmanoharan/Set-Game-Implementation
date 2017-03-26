@@ -1,4 +1,5 @@
 import set
+import sys
 
 
 def input_filename():
@@ -24,6 +25,5 @@ def read_from_file(filename):
             if cards is not None:
                 card_list.append(cards)
         return card_list
-    except:
-        print("\nPlease check if the file inside the code folder\n")
-        input_filename()        
+    except Exception as e:
+        sys.exit(f"\nFailed to open file: {e}")
